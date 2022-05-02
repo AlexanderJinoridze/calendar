@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Fira Sans', sans-serif;
+            vertical-align:top;
+            text-align: center;
+        }
+
+        .year > div {
+            display: block;
+        }
+
+        .year > div > div > span {
+            display: block;
+            padding: 2px 2px 6px;
+        }
+
+        .year > div > div {
+            height: 169px;
+            display: inline-block;
+            padding: 5px 3px 10px;
+            border: 2px solid #fff;
+            box-sizing: border-box;
+        }
+
+        /*.January, .February, .December {
+            background: #a4e1ff;
+        }
+
+        .March, .April, .May {
+            background: #98ffde;
+        }
+
+        .June, .July, .August {
+            background: #bbff8a;
+        }
+
+        .September, .October, .November {
+            background: #ff9561;
+        }*/
+
+        .month {
+            border: 1px solid rgba(0,0,0,.2);
+            background: #fff;
+        }
+
+        .week > div {
+            width: 14.285714285714286%;
+            display: inline-block;
+            padding: 2px 3.54px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0,0,0,.2);
+        }
+
+        .week > div.weekend {
+            color: #f00;
+            background: rgba(255,0,0,.1)
+        }
+
+        #calendar {
+            width: 562px;
+            margin: 0 auto;
+        }
+
+        #calendar > span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .December .month .week:nth-of-type(5) {
+            opacity: .9;
+            background: #eee;
+        }
+
+        #control_panel {
+            width: 562px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #control_panel button {
+            margin: 0;
+            border: 1px solid #000;
+            padding: 6px;
+            line-height: 1;
+            display: block;
+            position: absolute;
+            top: 0;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+        }
+
+        #control_panel button#prev {left: 5px}
+        #control_panel button#next {right: 5px}
+
+        #control_panel button#prev::before,
+        #control_panel button#prev::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            transform: translate(-50%,-50%);
+        }
+
+        #control_panel button#prev::before {
+            content: '<';
+        }
+
+        #control_panel button#next::after {
+            content: '>';
+        }
+    </style>
+</head>
+<body>
+    <div id="control_panel">
+        <button id="prev"></button>
+        <button id="next"></button>
+    </div>
+    <div id="calendar"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
